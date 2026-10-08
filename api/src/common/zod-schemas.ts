@@ -1,7 +1,7 @@
 import { z } from "zod";
 
 export const IdSchema = z.preprocess(
-  (value) => parseInt(value as string),
+  (value) => Number.parseInt(value as string),
   z.number().min(1)
 );
 
